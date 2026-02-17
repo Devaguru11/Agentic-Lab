@@ -55,4 +55,3 @@ ENV/
 .DS_Store
 
 # Outputs and artifacts
-outputs/
