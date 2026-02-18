@@ -1,30 +1,61 @@
-# AI Benchmarking — Day 1–2: Dataset Setup & EDA
+# AI Benchmarking — Project README
 
-Project summary
-- Purpose: Collect and clean the PIMA Indians Diabetes dataset, run basic exploratory data analysis (EDA), and save visual outputs for benchmarking and modelling.
-- What was done: Downloaded the dataset, replaced medically-invalid zeros with column medians, saved a cleaned CSV, and generated three EDA plots.
+## Overview
 
-Quick links
-- Main script: day1_2_setup_eda.py
-- Raw data: data/pima_diabetes.csv
-- Cleaned data: data/pima_diabetes_clean.csv
-- Generated outputs: outputs/ (01_class_distribution.png, 02_feature_distributions.png, 03_correlation_heatmap.png)
+This repository contains lightweight experiments and scripts for benchmarking models on the PIMA Indians Diabetes dataset. It includes a dataset setup and EDA step and a simple rule-based expert system for baseline evaluation. The project is being updated over time.
 
-How it works
-- Download: Script downloads the dataset from a public URL if data/pima_diabetes.csv is missing.
-- Cleaning: Replaces zeros in Glucose, BloodPressure, SkinThickness, Insulin, BMI with column medians to produce data/pima_diabetes_clean.csv.
-- Visuals: Saves three plots to outputs/.
+## Repository structure
 
-Dependencies
-- pandas, numpy, matplotlib, seaborn, requests
+- `Setup_eda.py` — dataset download, cleaning, and EDA (produces cleaned CSV and plot images in `outputs/`).
+- `Rule_based.py` — rule-based diabetes prediction logic and evaluation (writes `outputs/metrics_rule_based.json`).
+- `data/` — raw and cleaned datasets (`pima_diabetes.csv`, `pima_diabetes_clean.csv`).
+- `outputs/` — generated images and metrics (plots, `metrics_rule_based.json`).
+- `README_Setup.md` — details for the dataset setup and EDA step.
+- `README_rule_based.md` — details for the rule-based model and sample metrics.
 
-Install
-- pip install -r requirements.txt
-  or
-- pip install pandas numpy matplotlib seaborn requests
+## Requirements
 
-Run
-- python3 day1_2_setup_eda.py
+Python 3.8+ and common data science libraries. Example packages:
 
-Notes about outputs/
-- outputs/ is ignored by default. To show it on GitHub, add outputs/.gitkeep or remove outputs/ from .gitignore.
+- `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `requests`
+
+If you maintain a `requirements.txt`, install with:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Or install minimal packages directly:
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn requests
+```
+
+## Quick start — run the two main steps
+
+1) Dataset setup & EDA
+
+```bash
+python Setup_eda.py
+```
+
+This will ensure `data/pima_diabetes.csv` exists (download if needed), write `data/pima_diabetes_clean.csv`, and save EDA plots to `outputs/`.
+
+2) Rule-based baseline
+
+```bash
+python Rule_based.py
+```
+
+Outputs: `outputs/metrics_rule_based.json` with evaluation metrics (accuracy, precision, recall, AUC, TP/TN/FP/FN counts).
+
+## Notes & next steps
+
+- The repository is intended to be expanded: add model baselines, notebooks, and CI as needed.
+- I will keep this README and the per-module READMEs (`README_Setup.md`, `README_rule_based.md`) updated over time.
+
+## Contributing
+
+Open an issue or submit a pull request with suggested changes. If you want, I can add a `requirements.txt` and example notebook next.

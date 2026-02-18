@@ -1,0 +1,19 @@
+{
+  "system": "Rule-Based Expert System",
+  "accuracy": 0.6185,
+  "precision": 0.4762,
+  "recall_sensitivity": 0.9328,
+  "specificity": 0.45,
+  "f1_score": 0.6305,
+  "auc_roc": 0.7949,
+  "true_positives": 250,
+  "true_negatives": 225,
+  "false_positives": 275,
+  "false_negatives": 18,
+  "error_severity_notes": {
+    "false_negatives_count": 18,
+    "clinical_risk": "HIGH \u2014 missed diabetics may go untreated",
+    "false_positives_count": 275,
+    "clinical_risk_fp": "LOW \u2014 triggers unnecessary follow-up but not harmful"
+  }
+}
