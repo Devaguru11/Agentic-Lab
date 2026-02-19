@@ -1,0 +1,15 @@
+{
+  "logistic_regression": {
+    "brier_score": 0.1699,
+    "calibration_interpretation": "Well-calibrated",
+    "decision_consistency_rate": "100.0%",
+    "consistency_interpretation": "Fully consistent (deterministic)"
+  },
+  "random_forest": {
+    "brier_score": 0.1672,
+    "calibration_interpretation": "Well-calibrated",
+    "decision_consistency_rate": "100.0%",
+    "consistency_interpretation": "Fully consistent (deterministic)"
+  },
+  "note_for_week2": "Agentic LLM systems are non-deterministic (temperature > 0). Expect consistency < 100%. This difference is a key research finding."
+}

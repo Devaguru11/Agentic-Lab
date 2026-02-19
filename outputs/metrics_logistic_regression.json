@@ -1,0 +1,22 @@
+{
+  "system": "Logistic Regression",
+  "accuracy": 0.7292,
+  "precision": 0.6364,
+  "recall_sensitivity": 0.5224,
+  "specificity": 0.84,
+  "f1_score": 0.5738,
+  "auc_roc": 0.8239,
+  "true_positives": 35,
+  "true_negatives": 105,
+  "false_positives": 20,
+  "false_negatives": 32,
+  "training_time_seconds": 0.0165,
+  "error_severity_notes": {
+    "false_negatives_count": 32,
+    "clinical_risk": "HIGH \u2014 missed diabetics may go untreated",
+    "false_positives_count": 20,
+    "clinical_risk_fp": "LOW \u2014 triggers unnecessary follow-up"
+  },
+  "cross_val_f1_mean": 0.6517,
+  "cross_val_f1_std": 0.0278
+}

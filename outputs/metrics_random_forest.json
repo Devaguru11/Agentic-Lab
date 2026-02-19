@@ -1,0 +1,22 @@
+{
+  "system": "Random Forest",
+  "accuracy": 0.7552,
+  "precision": 0.6852,
+  "recall_sensitivity": 0.5522,
+  "specificity": 0.864,
+  "f1_score": 0.6116,
+  "auc_roc": 0.8097,
+  "true_positives": 37,
+  "true_negatives": 108,
+  "false_positives": 17,
+  "false_negatives": 30,
+  "training_time_seconds": 0.2663,
+  "error_severity_notes": {
+    "false_negatives_count": 30,
+    "clinical_risk": "HIGH \u2014 missed diabetics may go untreated",
+    "false_positives_count": 17,
+    "clinical_risk_fp": "LOW \u2014 triggers unnecessary follow-up"
+  },
+  "cross_val_f1_mean": 0.64,
+  "cross_val_f1_std": 0.0469
+}
