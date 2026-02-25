@@ -1,0 +1,24 @@
+{
+  "system": "LLM Agent (Groq Llama 3.3 70B)",
+  "model": "llama-3.3-70b-versatile",
+  "n_patients_evaluated": 50,
+  "accuracy": 0.74,
+  "precision": 0.56,
+  "recall_sensitivity": 0.875,
+  "specificity": 0.6765,
+  "f1_score": 0.6829,
+  "auc_roc": 0.6443,
+  "true_positives": 14,
+  "true_negatives": 23,
+  "false_positives": 11,
+  "false_negatives": 2,
+  "avg_time_per_patient": 8.6213,
+  "avg_confidence": 0.72,
+  "avg_tool_calls": 2.58,
+  "error_severity_notes": {
+    "false_negatives_count": 2,
+    "clinical_risk": "HIGH \u2014 missed diabetics may go untreated",
+    "false_positives_count": 11,
+    "clinical_risk_fp": "LOW \u2014 triggers unnecessary follow-up"
+  }
+}

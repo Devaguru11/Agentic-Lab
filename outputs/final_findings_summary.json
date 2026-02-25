@@ -1,0 +1,57 @@
+{
+  "project": "AI Benchmarking Research \u2014 Clinical Decision Support for Diabetes",
+  "systems_evaluated": 4,
+  "dataset": "PIMA Indians Diabetes Dataset (768 patients)",
+  "performance_summary": {
+    "best_overall_accuracy": {
+      "system": "Random Forest",
+      "value": 0.7552
+    },
+    "best_sensitivity_safety": {
+      "system": "Rule-Based",
+      "value": 0.9328,
+      "note": "Minimizes false negatives (missed diabetics)"
+    },
+    "best_specificity": {
+      "system": "Random Forest",
+      "value": 0.864,
+      "note": "Minimizes false positives (unnecessary follow-up)"
+    }
+  },
+  "consistency_analysis": {
+    "deterministic_systems": [
+      "Rule-Based",
+      "Logistic Regression",
+      "Random Forest"
+    ],
+    "consistency": "100.0%",
+    "llm_agent": {
+      "consistency": "90.0%",
+      "interpretation": "Non-deterministic (temperature > 0)"
+    },
+    "consistency_gap": "This gap represents the fundamental trade-off of agentic AI: reasoning ability vs determinism"
+  },
+  "clinical_recommendations": {
+    "for_screening": "Rule-Based system (93.3% sensitivity \u2014 catches almost all diabetics)",
+    "for_balanced_accuracy": "Random Forest (75.5% accuracy)",
+    "for_interpretability": "LLM Agent (provides natural language reasoning)",
+    "for_deployment_reliability": "Random Forest or Logistic Regression (100% consistency)"
+  },
+  "novel_research_contribution": [
+    "First quantitative comparison of agentic AI vs traditional ML for clinical decision support",
+    "Empirical measurement of LLM decision consistency in medical context",
+    "Framework for evaluating clinical AI beyond accuracy metrics",
+    "Error severity analysis distinguishing dangerous (FN) from benign (FP) errors"
+  ],
+  "limitations": {
+    "llm_agent": [
+      "Decision consistency: 90.0% (vs 100% for traditional ML)",
+      "Evaluated on only 50 patients due to API cost/time constraints",
+      "Reasoning quality not formally evaluated (future work)"
+    ],
+    "dataset": [
+      "Single dataset (PIMA) \u2014 generalization to other populations unknown",
+      "Class imbalance (65% non-diabetic) affects metric interpretation"
+    ]
+  }
+}

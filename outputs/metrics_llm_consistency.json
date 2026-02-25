@@ -1,0 +1,19 @@
+{
+  "llm_agent": {
+    "decision_consistency_rate": "90.0%",
+    "n_patients_tested": 20,
+    "n_runs_per_patient": 3,
+    "n_consistent": 18,
+    "n_inconsistent": 2,
+    "consistency_interpretation": "Non-deterministic (temperature > 0)",
+    "avg_confidence": 0.785,
+    "confidence_std": 0.0324
+  },
+  "baseline_comparison": {
+    "rule_based": "100.0% (deterministic)",
+    "logistic_regression": "100.0% (deterministic)",
+    "random_forest": "100.0% (deterministic)",
+    "llm_agent": "90.0%"
+  },
+  "note": "This consistency gap is the core trade-off of agentic AI in clinical settings. LLMs provide reasoning ability but sacrifice determinism."
+}

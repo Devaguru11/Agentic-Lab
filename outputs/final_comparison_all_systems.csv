@@ -1,0 +1,5 @@
+System,Accuracy,Sensitivity,Specificity,F1,AUC-ROC,False_Negatives,Decision_Consistency
+Rule-Based,0.6185,0.9328,0.45,0.6305,0.7949,18,100.0%
+Logistic Regression,0.7292,0.5224,0.84,0.5738,0.8239,32,100.0%
+Random Forest,0.7552,0.5522,0.864,0.6116,0.8097,30,100.0%
+LLM Agent (Groq),0.74,0.875,0.6765,0.6829,0.6443,2,90.0%
